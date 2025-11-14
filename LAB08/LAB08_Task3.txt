@@ -1,0 +1,36 @@
+1. K-Nearest Neighbors (KNN)
+
+KNN is a very simple, distance-based classifier. It doesn’t have strict mathematical assumptions, but it still relies on a few important ideas.
+The biggest assumption is that points that are close to each other should have similar labels. Because of this, KNN also assumes that the features are on a similar scale. If one feature has a much larger range than another, the distance calculation becomes unfair.
+KNN also works better when the number of features is not too large, otherwise distances become less meaningful. So overall, KNN mainly assumes that the dataset’s structure makes “closeness” meaningful.
+
+2. Support Vector Machine (SVM)
+
+SVM tries to find a boundary that separates the classes with the maximum margin.
+It assumes that the data can be separated either in the original feature space or after using a suitable kernel.
+Another important assumption is that the chosen kernel actually matches the pattern in the data (for example, linear, RBF, or polynomial).
+Since SVM is sensitive to feature values, it also assumes that the data has been scaled properly.
+Finally, SVM works best when the dataset does not have too many outliers, because outliers can influence the margin and affect the hyperplane.
+
+3. Decision Tree
+
+Decision Trees do not depend on statistical assumptions like linearity or normality.
+They mainly assume that the dataset contains useful features that help in splitting the data clearly.
+Each observation is also assumed to be independent of the others.
+Since the tree is built based on how well features separate the classes (using measures like entropy or Gini index), it is important that the dataset has enough samples to make meaningful splits.
+Overall, the main assumption is that the tree structure built from the training data represents the patterns of the full dataset.
+
+4. Ensemble Learning (Random Forest, Bagging, Boosting)
+
+Ensemble methods combine multiple models to get better performance, so their assumptions relate to how the base learners behave.
+Bagging and Random Forest assume that the individual learners are diverse enough so that their errors don’t all point in the same direction.
+Boosting assumes that each new learner is able to improve upon the mistakes made by the previous one.
+Like Decision Trees, ensemble methods do not assume anything about the data distribution, normality, or linearity. They only require that the data samples are independent and that the weak learners can learn useful patterns.
+
+5. Linear Regression
+
+Linear Regression has the strictest assumptions among the classifiers we studied.
+It assumes that the relationship between the predictors and the target is linear.
+The errors (residuals) should have constant variance, should be normally distributed, and should not follow any pattern with respect to time or order.
+It also assumes that the input features are not perfectly correlated with each other; otherwise, the model cannot correctly estimate the coefficients.
+Independence of observations is also important, because dependent samples can make the results unreliable.
